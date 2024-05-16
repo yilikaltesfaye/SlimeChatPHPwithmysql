@@ -18,8 +18,9 @@
                         $row = mysqli_fetch_assoc($sql);
                     }
                 ?>
+                
                 <a href="users.php" class="back-icon"><icon class="fas fa-arrow-left"></icon></a>
-                <img class="view-profile" src="php/images/<?php echo $row['img'] ?>" alt="">
+                <img class="view-pic" src="php/images/<?php echo $row['img'] ?>" alt="">
                 <div class="details">
                     <span><?php echo $row['fname'] . " " . $row['lname'] ?></span>
                     <p><?php echo $row['status']  ?></p>
@@ -36,10 +37,23 @@
             </form>
         </section>
     </div>
+    <div class="image-container">
+        <div class="close-btn"><icon class="fa-close"></icon></div>
+        <img src="php/images/<?php echo $row['img'] ?>" alt="">
+        <p><?php echo $row['fname'] . " " . $row['lname'] ?>'s Profile Picture</p>
+    </div>
     <script src="./JS/chat.js"></script>
     <script>
-        const profilepic = document.querySelector(".view-profile");
+        const closeBtn = document.querySelector(".close-btn");
+        const viewBtn = document.querySelector(".view-pic");
+        const imageContainer = document.querySelector(".image-container");
         
+        closeBtn.addEventListener("click", function() {
+            imageContainer.style.display = "none";
+        })
+        viewBtn.addEventListener("click", function() {
+            imageContainer.style.display = "flex";
+        })
     </script>
 </body>
 </html>
