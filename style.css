@@ -2,8 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: none;
-    font-family: sans-serif;
+    /* font-size: 11px; */
 }
 icon {
     font-family: "FontAwesome";
@@ -13,31 +14,57 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #e0dede;
+    background-image: url("bg.jpg");
+    background-size: 30%;
+    color: white;
 }
 .wrapper {
-    background: #fff;
-    width: 450px;
-    border-radius: 16px;
+    width: 60vw;
+    height: 90vh;
+    background-color: rgba(17,25,40,0.75);
+    backdrop-filter: blur(10px) saturate(180%);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.125);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
-                0 32px 64px -48px rgba(0,0,0,0.5);
+                0 32px 64px -48px rgba(0,0,0,0.5);   
 }
 /* Signup Form CSS Code */
 .form {
     padding: 25px 30px;
+    align-items: center;
+    justify-content: space-around;
+}
+.home {
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    position: absolute;
+    top: 1em;
+    opacity: 0.2;
+    left: 0.5rem;
+    text-shadow:  -2px 0 0  rgb(255, 255, 255);
+    a {
+        color: rgb(133, 160, 211);
+    }
 }
 .form header {
-    font-size: 25px;
+    font-size: 30px;
+    letter-spacing: 5px;
     font-weight: 600;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e6e6e6;
+    position: absolute;
+    top: 3em;
+    color: rgb(133, 160, 211);
+    text-shadow: -2px 0 0  rgb(255, 255, 255);
 }
 .form form {
     margin: 20px 0;
 }
 .form form .error-txt {
-    color: #721c24;
-    background: #f8d7da;
+    color: #fff;
+    background: rgb(17,25,40);
     padding: 8px 10px;
     text-align: center;
     border-radius: 5px;
@@ -107,10 +134,14 @@ form .name-details .field:last-child{
     font-size: 15px;
 }
 .form .link a {
-    color: #333;
+    color: #a4a4a4;
 }
 .form .link a:hover{
     text-decoration: underline;
+}
+.login{
+    width: 409px;
+    max-width: 409px;
 }
 /* Users Area css code */
 .users {
@@ -133,18 +164,35 @@ form .name-details .field:last-child{
     align-items: center;
 }
 .users header .content img {
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
+}
+.users header{
+    position: absolute;
+    top: 10%;
+    width: 40vw;
+    right: 15%;
+    left: 15%;
+}
+@media (max-width : 900px) {
+    .users header{
+        top: 10%;
+        width: 70%;
+        right: 15%;
+        left: 10%;    
+    }
 }
 :is(.users, .users-list)  .details {
     margin-left: 15px;
     display: flex;
-    color: #000;
+    color: goldenrod;
     flex-direction: column;
     justify-content: center;
 }
 :is(.users, .users-list) .details span {
+    text-transform: capitalize;
     font-size: 16px;
+    color: whitesmoke;
     font-weight: 600;
 }
 .users header .details p {
@@ -157,12 +205,27 @@ form .name-details .field:last-child{
     font-size: 14px;
     border-radius: 5px;
 }
+.users-flex {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width : 900px) {
+    .users-flex{
+        width: 60%;
+        left: 17%;
+    }
+}
 .users .search {
     margin: 20px 0;
     display: flex;
-    position: relative;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .users .search .text {
     font-size: 16px;
@@ -174,6 +237,7 @@ form .name-details .field:last-child{
     border: 1px solid #ccc;
     padding: 0 13px;
     font-size: 16px;
+    margin-right: 9rem;
     border-radius: 5px 0 0 5px;
     outline: none;
     opacity: 0;
@@ -186,6 +250,7 @@ form .name-details .field:last-child{
 }
 .users .search button {
     width: 47px;
+    margin-left: 4rem;
     height: 42px;
     border: none;
     outline: none;
@@ -207,6 +272,7 @@ form .name-details .field:last-child{
     max-height: 280px;
     overflow-y: auto;
 }
+
 :is(.users-list, .chat-box)::-webkit-scrollbar {
     width: 0px;
 }
@@ -221,11 +287,11 @@ form .name-details .field:last-child{
     margin-bottom: 0px;
 }
 .users-list a .content img{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 .users-list a .content p {
-    color: #67676a;
+    color: rgba(218, 165, 32, 0.554);
 
 }
 .users-list a .status-dot {
@@ -237,29 +303,62 @@ form .name-details .field:last-child{
     color: #ccc;
 }
 /* Chat Area CSS code */
+.chat-area {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .chat-area header {
     display: flex;
     align-items: center;
-    padding: 18px 30px;
+    padding: 18px 20px;
+    position: absolute;
+    top: 2%;
+    left: 23%;
 }
 .chat-area header .back-icon {
-    font-size: 16px;
-    font-weight: normal;
-    color: #333;
+    font-size: 20px;
+    font-weight:lighter;
+    color: rgb(15, 88, 224);
 }
 .chat-area header img {
-    height: 45px;
-    width: 45px;
-    margin: 0 15px;
+    height: 65px;
+    width: 65px;
+    margin-left: 21px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 .chat-area header span {
-    font-size: 16px;
+    font-size: 17px;
+    text-transform: capitalize;
     font-weight: 550;
 }
+.chat-area header p {
+    font-size: 11px;
+    color: goldenrod;
+    font-weight: 550;
+}
+@media (max-width: 880px) {
+    .wrapper {
+        width: 95vw;
+    }
+    .chat-area {
+        width: 95%;
+    }
+   .chat-box {
+    width: 90%;
+   }
+}
 .chat-box {
-    height: 450px;
+    margin-top: 4.5rem;
+    border-radius: 8px;
+    height: 460px;
+    width: 70%;
     overflow-y: auto;
-    background: #f7f7f7;
+    background: rgba(17,25,40,0.75);
+    backdrop-filter: blur(-10px) saturate(10%);
     padding: 10px 30px 20px 30px;
     box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
                 inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
@@ -304,7 +403,8 @@ form .name-details .field:last-child{
     border-radius: 18px 18px 18px 0;
 }
 .chat-area .typing-area {
-    padding: 18px 30px;
+    padding: 8px 30px;
+    width: 75%;
     display: flex;
     justify-content: space-between;
 }
@@ -321,7 +421,7 @@ form .name-details .field:last-child{
     width: 55px;
     border: none;
     outline: none;
-    background: #333;
+    background: #000000;
     color: #fff;
     font-size: 16px;
     cursor: pointer;

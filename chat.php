@@ -19,7 +19,7 @@
                     }
                 ?>
                 <a href="users.php" class="back-icon"><icon class="fas fa-arrow-left"></icon></a>
-                <img src="php/images/<?php echo $row['img'] ?>" alt="">
+                <img class="view-profile" src="php/images/<?php echo $row['img'] ?>" alt="">
                 <div class="details">
                     <span><?php echo $row['fname'] . " " . $row['lname'] ?></span>
                     <p><?php echo $row['status']  ?></p>
@@ -37,5 +37,9 @@
         </section>
     </div>
     <script src="./JS/chat.js"></script>
+    <script>
+        const profilepic = document.querySelector(".view-profile");
+        
+    </script>
 </body>
 </html>

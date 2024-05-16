@@ -26,6 +26,7 @@
                 </div>
                 <a href="php/logout.php?logout_id=<?php echo $row['unique_id']?>" class="logout">Logout</a>
             </header>
+            <div class="users-flex">
             <div class="search">
                 <span class="text">Select a user to start chat</span>
                 <input type="text" placeholder="Enter name to search...">
@@ -33,6 +34,7 @@
             </div>
             <div class="users-list">
                 
+            </div>
             </div>
         </section>
     </div>

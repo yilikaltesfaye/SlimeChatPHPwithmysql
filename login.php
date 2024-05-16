@@ -9,7 +9,8 @@
 <body>
     <div class="wrapper">
         <section class="form login">
-            <header>Slime Chat</header>
+            <div class="home"><a href="index.php">HomePage</a></div>
+            <header>Log In</header>
             <form action="#">
                 <div class="error-txt"></div>
                     <div class="field input">
@@ -21,7 +22,7 @@
                         <input type="password" name="password" placeholder="Enter your Password">
                         <icon class="fas fa-eye"></icon>
                     </div>
-                    <div class="field button">
+                    <div class="field button" class="input-login">
                         <input type="submit" value="Login">
                     </div>
             </form>

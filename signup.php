@@ -9,7 +9,8 @@
 <body>
     <div class="wrapper">
         <section class="form signup">
-            <header>Slime Chat</header>
+            <div class="home"><a href="index.php">HomePage</a></div>
+            <header>Register</header>
             <form action="#" enctype="multipart/form-data">
                 <div class="error-txt"></div>
                 <div class="name-details">
