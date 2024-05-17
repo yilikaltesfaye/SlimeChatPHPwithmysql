@@ -1,13 +1,15 @@
+/* full html starter code */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box; 
+    font-family: sans-serif;
     text-decoration: none;
 }
 icon {
     font-family: "FontAwesome";
 }
+/* body css */
 body {
     display: flex;
     align-items: center;
@@ -17,6 +19,7 @@ body {
     background-size: 30%;
     color: white;
 }
+/* The Blurred backgroud */
 .wrapper {
     width: 60vw;
     height: 94vh;
@@ -30,25 +33,27 @@ body {
     box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
                 0 32px 64px -48px rgba(0,0,0,0.5);   
 }
-/* Signup Form CSS Code */
+/* Signup and login Form CSS Code */
 .form {
     padding: 25px 30px;
     align-items: center;
     justify-content: space-around;
 }
+/* The homepage text css */
 .home {
     font-size: 30px;
     letter-spacing: 5px;
     font-weight: 600;
     position: absolute;
     top: .3em;
-    opacity: 0.2;
+    opacity: 0.3;
     left: 0.5rem;
     text-shadow:  -2px 0 0  rgb(255, 255, 255);
     a {
         color: rgb(133, 160, 211);
     }
 }
+/* Signup and Login text */
 .form header {
     font-size: 30px;
     letter-spacing: 5px;
@@ -61,6 +66,7 @@ body {
 .form form {
     margin: 20px 0;
 }
+/* Error text CSS */
 .form form .error-txt {
     color: #fff;
     background: rgb(17,25,40);
@@ -174,6 +180,7 @@ form .name-details .field:last-child{
     right: 15%;
     left: 15%;
 }
+/* responsive code CSS */
 @media (max-width : 900px) {
     .users header{
         top: 10%;
@@ -182,10 +189,11 @@ form .name-details .field:last-child{
         left: 10%;    
     }
 }
+/* combined css for two classes in css  */
 :is(.users, .users-list)  .details {
     margin-left: 15px;
     display: flex;
-    color: goldenrod;
+    color: rgb(90, 131, 221);
     flex-direction: column;
     justify-content: center;
 }
@@ -214,6 +222,8 @@ form .name-details .field:last-child{
     flex-direction: column;
     justify-content: center;
 }
+
+/* Responsive media queries for user-flex class in users.php */
 
 @media (max-width : 900px) {
     .users-flex{
@@ -337,9 +347,10 @@ form .name-details .field:last-child{
 }
 .chat-area header p {
     font-size: 11px;
-    color: goldenrod;
+    color: rgb(90, 131, 221);
     font-weight: 550;
 }
+/* Responsive css code at max-width 880px */
 @media (max-width: 880px) {
     .wrapper {
         width: 95vw;
@@ -445,6 +456,7 @@ form .name-details .field:last-child{
     width: 80vw;
     overflow: auto;
 }
+
 /* Styling for the close button */
 .close-btn {
     position: absolute;
@@ -465,6 +477,7 @@ form .name-details .field:last-child{
     height: 80%;
     border-radius: 0;
 }
+/* Styling for the the text telling whos picture it is */
 .image-container p {
     position: absolute;
     bottom: 2%;

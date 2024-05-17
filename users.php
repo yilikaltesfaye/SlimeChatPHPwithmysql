@@ -20,7 +20,7 @@
                 <div class="image-container">
         <div class="close-btn"><icon class="fa-close"></icon></div>
         <img src="php/images/<?php echo $row['img'] ?>" alt="">
-        <p>My Profile Picture - <?php echo $row['fname'] ?>'s</p>
+        <p>My Profile Picture</p>
     </div>
                 <div class="content">
                     <img class="view-pic" src="php/images/<?php echo $row['img'] ?>" alt="">

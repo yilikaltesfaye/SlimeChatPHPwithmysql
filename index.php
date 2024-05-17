@@ -1,7 +1,7 @@
-
 <?php include_once "header.php" ?>
 <style>
-    body {
+    
+    .index-css-body {
         gap: .5rem;
     }
     .awrapper {
@@ -25,7 +25,7 @@
     text-shadow:  -2px 0 0  rgb(255, 255, 255);
     }
     }
-    a {
+    .index-php-css {
         letter-spacing: 5px;
         font-weight: 600;
         background-color: #333;
@@ -60,9 +60,9 @@
     left: 0.5rem;
     text-shadow:  -2px 0 0  rgb(255, 255, 255);
     }
-}
+    }
 </style>
-<body>
+<body class="index-css-body">
     <div class="awrapper">
     <p>S</p>
     <p>L</p>
@@ -75,7 +75,7 @@
     <p>T</p>
     </div>
     <div class="wrapper">
-    <a href="./login.php">Join Now</a>
+    <a class="index-php-css" href="./login.php">Join Now</a>
     </div>
     <div class="bwrapper">
     <p>S</p>
